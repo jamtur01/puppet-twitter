@@ -23,10 +23,10 @@ Puppet::Reports.register_report(:twitter) do
     if self.status == 'failed'
       Puppet.debug "Sending status for #{self.host} to Twitter"
       Twitter.configure do |config|
-        config.consumer_key = CREDS[:consumer_key]
-        config.consumer_secret = CREDS[:consumer_secret]
-        config.oauth_token = CREDS[:access_token]
-        config.oauth_token_secret = CREDS[:access_token_secret]
+        config.consumer_key = "#{CREDS[:consumer_key]}"
+        config.consumer_secret = "#{CREDS[:consumer_secret]}"
+        config.oauth_token = "#{CREDS[:access_key]}"
+        config.oauth_token_secret = "#{CREDS[:access_secret]}"
       end
 
       Twitter.update("Puppet run for #{self.host} #{self.status}")

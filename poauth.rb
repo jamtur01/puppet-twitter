@@ -38,8 +38,8 @@ pin = STDIN.readline.chomp
 access_token = request_token.get_access_token(:oauth_verifier => pin)
 
 config = {}
-config = { 'consumer_key' => "#{consumer_key}", 'consumer_secret' => "#{consumer_secret}", 
-           'access_token' => "#{access_token.token}", 'access_token_secret' => "#{access_token.secret}" }
+config = { :consumer_key => "#{consumer_key}", :consumer_secret => "#{consumer_secret}", 
+           :access_key => "#{access_token.token}", :access_secret => "#{access_token.secret}" }
 
 File.open('twitter.yaml', 'w') {|f| f.write(config.to_yaml) }
 
