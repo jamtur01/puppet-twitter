@@ -10,22 +10,34 @@ Twitter.
 Requirements
 ------------
 
-* `grackle`
+* `oauth`
+* `twitter`
 * `puppet`
 
 Installation & Usage
 --------------------
 
-1.  Install the `grackle` gem on your Puppet master
+1.  Install the `oauth` and `twitter` gems on your Puppet master
 
-    $ sudo gem install grackle
+    $ sudo gem install oauth twitter
 
-2.  Install puppet-twitter as a module in your Puppet master's module
+2.  Create a new Twitter app [here](http://twitter.com/apps/new). Make a
+    note of the consumer key and consumer secret.
+
+3.  Run the `poauth.rb` script and provide the comsumer key and secret
+    from the Twitter application you created in Step 2.  Go to the URL
+    provided by the script and authorise the Twitter user you wish to
+    tweet your reports with to use this application.  You will be
+    provided with a PIN number.  Paste it into the script where you are
+    prompted.  This will create a file called `twitter.yaml` in your
+    current directory.
+
+4.  Copy `twitter.yaml` into your `/etc/puppet/` directory.
+
+5.  Install puppet-twitter as a module in your Puppet master's module
 path.
 
-3.  Update the `twitter` variable in the `twitter.rb` file with your twitter connection details.
-
-4.  Enable pluginsync and reports on your master and clients in `puppet.conf`
+6.  Enable pluginsync and reports on your master and clients in `puppet.conf`
 
     [master]
     report = true
@@ -35,7 +47,7 @@ path.
     report = true
     pluginsync = true
 
-5.  Run the Puppet client and sync the report as a plugin
+7.  Run the Puppet client and sync the report as a plugin
 
 Author
 ------

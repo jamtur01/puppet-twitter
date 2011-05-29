@@ -1,0 +1,5 @@
+---
+consumer_key: key
+consumer_secret: secret
+access_token_secret: secret
+access_token: token
