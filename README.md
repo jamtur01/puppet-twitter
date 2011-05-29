@@ -34,6 +34,7 @@ Installation & Usage
     prompted.  This will create a file called `twitter.yaml` in your
     current directory:
 
+        $ ruby poauth.rb
         Set up your application at https://twitter.com/apps/ (as a 'Client' app),
         then enter your 'Consumer key' and 'Consumer secret':
 
