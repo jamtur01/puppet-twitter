@@ -21,8 +21,9 @@ Installation & Usage
 
         $ sudo gem install oauth twitter
 
-2.  Create a new Twitter app [here](http://twitter.com/apps/new). Make a
-    note of the consumer key and consumer secret. You're going to need
+2.  Create a new Twitter app [here](http://twitter.com/apps/new). For
+    `Application Type` specify `Client` and for `Default Access Type`
+    specify `Read & Write`.  Make a note of the consumer key and consumer secret. You're going to need
     them in Step 3.
 
 3.  Run the `poauth.rb` script and provide the comsumer key and secret
@@ -44,10 +45,10 @@ Installation & Usage
         then enter the PIN you are given:
         3300514
 
-4.  Copy `twitter.yaml` into your `/etc/puppet/` directory.
+4.  Copy the `twitter.yaml` file you created in Step 3. into your `/etc/puppet/` directory.
 
 5.  Install puppet-twitter as a module in your Puppet master's module
-path.
+    path.
 
 6.  Enable pluginsync and reports on your master and clients in `puppet.conf`
 
