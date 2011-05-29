@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 
+# Adapted from gasman's bloody useful Gist - https://gist.github.com/524376
 # Command line util for acquiring a one-off Twitter OAuth access token
 # Based on http://blog.beefyapps.com/2010/01/simple-ruby-oauth-with-twitter/
+
 
 require 'rubygems'
 require 'oauth'
