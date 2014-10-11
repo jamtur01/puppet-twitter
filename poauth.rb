@@ -23,10 +23,8 @@ consumer = OAuth::Consumer.new(
   consumer_key,
   consumer_secret,
   {
-    :site => 'http://api.twitter.com/',
-    :request_token_path => '/oauth/request_token',
-    :access_token_path => '/oauth/access_token',
-    :authorize_path => '/oauth/authorize'
+    :site   => 'https://api.twitter.com/',
+    :scheme => :header,
   })
 
 request_token = consumer.get_request_token
